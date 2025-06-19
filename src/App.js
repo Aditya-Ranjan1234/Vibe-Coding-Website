@@ -33,8 +33,6 @@ function App() {
         {darkMode ? 'Light Mode' : 'Dark Mode'}
       </button>
       <Navbar />
-      <div className='section-label'>Hero Section</div>
-      <HeroSection id="home" />
       <div className='section-label'>Parallax Section</div>
       <ParallaxSection id="parallax" />
       <div className='section-label'>Striking Features Section</div>

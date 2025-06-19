@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-big">
       <div className="navbar-logo navbar-logo-big">Vibe Coding</div>
-      <div className={`navbar-links${open ? ' open' : ''} navbar-links-big`} style={{ fontSize: '1rem', overflowX: 'auto', whiteSpace: 'nowrap', maxWidth: '100vw', gap: '0.5rem', display: 'flex' }}>
+      <div className={`navbar-links${open ? ' open' : ''} navbar-links-big`} style={{ fontSize: '0.85rem', overflowX: 'auto', whiteSpace: 'nowrap', maxWidth: '100vw', gap: '0.2rem', display: 'flex' }}>
         <button className="navbar-btn" onClick={() => scrollToSection('home')}>Home</button>
         <button className="navbar-btn" onClick={() => scrollToSection('parallax')}>Parallax</button>
         <button className="navbar-btn" onClick={() => scrollToSection('striking')}>Striking Features</button>

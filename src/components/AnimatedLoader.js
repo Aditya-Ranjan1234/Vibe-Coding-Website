@@ -5,12 +5,6 @@ const NUM_BLOCKS = 6;
 const BLOCK_WIDTH = 100;
 const BLOCK_HEIGHT = 20;
 const ANIMATION_TIMINGS = [0, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500];
-const NUM_TEXT_SEQUENCE = [
-  { text: '06', start: 0, end: 500 },
-  { text: '4/', start: 500, end: 1500 },
-  { text: '89', start: 1500, end: 2500 },
-  { text: '00', start: 2500, end: 3500 },
-];
 
 const AbstractVisual = () => (
   <div className="abstract-bg">
@@ -26,7 +20,7 @@ const AbstractVisual = () => (
 const AnimatedLoader = ({ onFinish }) => {
   const [phase, setPhase] = useState(0); // 0: blocks, 1: L, 2: wipe, 3: abstract
   const [blockStates, setBlockStates] = useState(Array(NUM_BLOCKS).fill('white'));
-  const [numText, setNumText] = useState('06');
+  const [animatedNum, setAnimatedNum] = useState(0);
   const [showNum, setShowNum] = useState(true);
   const [showLoader, setShowLoader] = useState(true);
   const [showWipe, setShowWipe] = useState(false);
@@ -36,20 +30,16 @@ const AnimatedLoader = ({ onFinish }) => {
     // Phase 1: Block-based loader
     timeouts.push(setTimeout(() => {
       setBlockStates(['white', 'dark', 'dark', 'dark', 'dark', 'dark']);
-      setNumText('06');
       setShowNum(true);
     }, 0));
     timeouts.push(setTimeout(() => {
       setBlockStates(['dark', 'white', 'dark', 'dark', 'dark', 'dark']);
-      setNumText('4/');
     }, 500));
     timeouts.push(setTimeout(() => {
       setBlockStates(['dark', 'dark', 'white', 'dark', 'dark', 'dark']);
-      setNumText('89');
     }, 1000));
     timeouts.push(setTimeout(() => {
       setBlockStates(['dark', 'dark', 'dark', 'white', 'dark', 'dark']);
-      setNumText('00');
     }, 1500));
     timeouts.push(setTimeout(() => {
       setBlockStates(['dark', 'dark', 'dark', 'dark', 'white', 'dark']);
@@ -76,6 +66,27 @@ const AnimatedLoader = ({ onFinish }) => {
     return () => timeouts.forEach(clearTimeout);
   }, [onFinish]);
 
+  // Animated number logic
+  useEffect(() => {
+    if (!showNum) return;
+    let start = null;
+    let raf;
+    const duration = 2000; // 2 seconds for the number animation
+    function animateNum(ts) {
+      if (!start) start = ts;
+      const elapsed = ts - start;
+      let progress = Math.min(elapsed / duration, 1);
+      setAnimatedNum(Math.floor(progress * 100));
+      if (progress < 1) {
+        raf = requestAnimationFrame(animateNum);
+      } else {
+        setAnimatedNum(100);
+      }
+    }
+    raf = requestAnimationFrame(animateNum);
+    return () => raf && cancelAnimationFrame(raf);
+  }, [showNum]);
+
   return (
     <div className={`animated-loader${showLoader ? '' : ' hidden'}`}>
       {/* Phase 1: Block loader */}
@@ -90,9 +101,9 @@ const AnimatedLoader = ({ onFinish }) => {
           ))}
         </div>
       )}
-      {/* Phase 1: Numerical text */}
+      {/* Phase 1: Animated number */}
       {showNum && (
-        <div className="loader-num-text">{numText}</div>
+        <div className="loader-num-text">{String(animatedNum).padStart(3, '0')}</div>
       )}
       {/* Phase 1/2: L shape */}
       {phase === 1 && (
