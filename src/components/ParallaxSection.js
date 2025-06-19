@@ -31,7 +31,7 @@ const ParallaxSection = () => {
       <div className="parallax-bg" ref={bgRef}>
         <div className="parallax-bg-split">
           <video
-            src="/assets/parallax-video.mp4"
+            src="Assets/parallax animation.mp4"
             autoPlay
             muted
             loop

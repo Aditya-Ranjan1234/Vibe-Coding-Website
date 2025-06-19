@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-big">
       <div className="navbar-logo navbar-logo-big">Vibe Coding</div>
-      <div className={`navbar-links${open ? ' open' : ''} navbar-links-big`} style={{ fontSize: '0.85rem', overflowX: 'auto', whiteSpace: 'nowrap', maxWidth: '100vw', gap: '0.2rem', display: 'flex' }}>
+      <div className={`navbar-links${open ? ' open' : ''} navbar-links-big`} style={{ fontSize: '0.85rem', overflowX: 'auto', whiteSpace: 'nowrap', maxWidth: '100vw', gap: '0.2rem' }}>
         <button className="navbar-btn" onClick={() => scrollToSection('home')}>Home</button>
         <button className="navbar-btn" onClick={() => scrollToSection('parallax')}>Parallax</button>
         <button className="navbar-btn" onClick={() => scrollToSection('striking')}>Striking Features</button>
@@ -34,6 +34,7 @@ const Navbar = () => {
         <button className="navbar-btn" onClick={() => scrollToSection('carouselswitch')}>Carousel Switch</button>
         <button className="navbar-btn" onClick={() => scrollToSection('scrollpopup')}>Scroll PopUp</button>
         <button className="navbar-btn" onClick={() => scrollToSection('sustainability')}>Sustainability</button>
+        <button className="navbar-btn" onClick={() => scrollToSection('client-logos')}>Clients</button>
       </div>
       <div className="navbar-toggle navbar-toggle-big" onClick={handleNav}>
         <span className="bar"></span>

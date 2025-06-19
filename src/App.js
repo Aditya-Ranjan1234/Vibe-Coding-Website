@@ -17,6 +17,7 @@ import RippleEffectSection from './components/RippleEffectSection';
 import ScrollPopUpSection from './components/ScrollPopUpSection';
 import CardsSection from './components/CardsSection';
 import GraphSection from './components/GraphSection';
+import ClientLogosSection from './components/ClientLogosSection'; // Import the new component
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -59,6 +60,9 @@ function App() {
       <ScrollPopUpSection id="scrollpopup" />
       <div className='section-label'>Sustainability Dashboard</div>
       <SustainabilityDashboard id="sustainability" />
+
+      <div className='section-label'>Client Logos</div>
+      <ClientLogosSection />
     </div>
   );
 }
