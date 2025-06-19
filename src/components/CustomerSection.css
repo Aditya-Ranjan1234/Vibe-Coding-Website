@@ -1,44 +1,47 @@
 .customer-section {
   background: #f7f7f7;
-  padding: 60px 0 40px 0;
+  padding: 40px 0 24px 0;
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .customer-header {
-  margin-left: 40px;
-  margin-bottom: 30px;
+  margin-left: 0;
+  margin-bottom: 24px;
+  padding-left: 24px;
 }
 .sub-heading {
-  font-size: 14px;
+  font-size: 13px;
   letter-spacing: 2px;
   color: #666;
   font-weight: 600;
   text-transform: uppercase;
-  margin: 0 0 8px 0;
+  margin: 0 0 6px 0;
 }
 .main-heading {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #222;
   margin: 0;
 }
 .customer-logos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 28px;
-  padding: 0 40px 40px 40px;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 18px;
+  padding: 0 16px 24px 16px;
 }
 .logo-card {
   position: relative;
   background: #fff;
-  border-radius: 14px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 32px 18px;
+  padding: 20px 8px;
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.25s, box-shadow 0.25s;
 }
 .logo-card .logo-card-hover-bg {
   position: absolute;
@@ -56,15 +59,15 @@
   100% { background-position: 0% 50%; }
 }
 .logo-card:hover {
-  transform: scale(1.06) translateY(-4px);
-  box-shadow: 0 8px 24px rgba(80,80,180,0.12);
+  transform: scale(1.04) translateY(-2px);
+  box-shadow: 0 6px 18px rgba(80,80,180,0.10);
 }
 .logo-card:hover .logo-card-hover-bg {
   opacity: 1;
 }
 .logo {
-  max-width: 90%;
-  max-height: 48px;
+  max-width: 80%;
+  max-height: 38px;
   filter: grayscale(100%) brightness(0.85);
   z-index: 1;
   transition: filter 0.5s;
@@ -75,12 +78,12 @@
 .bottom-cta {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 .view-partners-btn {
   background: #007bff;
   color: #fff;
-  padding: 15px 36px;
+  padding: 12px 28px;
   border: none;
   border-radius: 50px;
   font-size: 1rem;
