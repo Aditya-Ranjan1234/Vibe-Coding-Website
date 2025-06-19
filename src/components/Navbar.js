@@ -6,9 +6,12 @@ const Navbar = () => {
   const handleNav = () => setOpen(!open);
 
   const scrollToSection = (id) => {
-    const section = document.getElementById(id);
+    const section = document.querySelector(`[id='${id}']`);
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
+      const navbar = document.querySelector('.navbar.navbar-big');
+      const navbarHeight = navbar ? navbar.offsetHeight : 0;
+      const top = section.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+      window.scrollTo({ top, behavior: 'smooth' });
       setOpen(false);
     }
   };
@@ -30,7 +33,6 @@ const Navbar = () => {
         <button className="navbar-btn" onClick={() => scrollToSection('testimonials')}>Testimonials</button>
         <button className="navbar-btn" onClick={() => scrollToSection('customers')}>Customers</button>
         <button className="navbar-btn" onClick={() => scrollToSection('carouselswitch')}>CarouselSwitch</button>
-        <button className="navbar-btn" onClick={() => scrollToSection('carousel')}>Carousel</button>
         <button className="navbar-btn" onClick={() => scrollToSection('sustainability')}>Sustainability</button>
       </div>
       <div className="navbar-toggle navbar-toggle-big" onClick={handleNav}>

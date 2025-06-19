@@ -59,8 +59,6 @@ function App() {
       <CustomerSection id="customers" />
       <div className='section-label'>Carousel Switch Section</div>
       <CarouselSwitchSection id="carouselswitch" />
-      <div className='section-label'>Carousel Section</div>
-      <CarouselSection id="carousel" />
       <div className='section-label'>Sustainability Dashboard</div>
       <SustainabilityDashboard id="sustainability" />
     </div>
