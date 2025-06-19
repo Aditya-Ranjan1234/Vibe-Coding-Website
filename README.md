@@ -68,3 +68,30 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## New Sections
+
+### Ripple Effect
+A full-screen, interactive background animation using Three.js/WebGL. Subtle, iridescent ripples follow the mouse, creating a fluid, glass-like effect.
+
+### Scroll and Pop Up
+A multi-stage, scroll-triggered animation sequence with fluid backgrounds, video reveal, play reel, and interactive image grid with pop-up overlays. Uses advanced scroll and animation techniques for seamless transitions.
+
+### Showcase Work
+A dynamic case study slider with a bold red background, large animated numbers, and a unique "peel/wipe" transition between case studies. Each case features a title, tags, image, and a "Read More" button. Navigation is synchronized with animated masks and transitions.
+
+## Features (Updated)
+- Modern, fixed, responsive navigation bar
+- Animated loader
+- Animated hero section
+- Parallax Apple Vision Pro-inspired section
+- Striking features grid
+- Features/services tabbed section
+- Ripple effect background (Three.js/WebGL)
+- Scroll and pop up multi-stage section
+- Showcase work with peel/wipe transitions
+- Testimonials, customer grid, carousel, stats, dashboard
+
+## Setup & Dependencies
+- React, D3.js, Three.js (for ripple effect)
+- No custom server required; deployable on Vercel
