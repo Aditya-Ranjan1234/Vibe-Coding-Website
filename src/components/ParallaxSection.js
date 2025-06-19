@@ -30,21 +30,41 @@ const ParallaxSection = () => {
       {/* Parallax Background */}
       <div className="parallax-bg" ref={bgRef}>
         <div className="parallax-bg-split">
-          <div className="parallax-placeholder" style={{flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#bbb', fontSize: '1.3rem', background: '#f4f4f4', minHeight: '120px'}}>No Video</div>
-          <div className="parallax-placeholder" style={{flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#bbb', fontSize: '1.3rem', background: '#f4f4f4', minHeight: '120px'}}>No Image</div>
+          <video
+            src="/assets/parallax-video.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            style={{ flex: 1, width: '100%', height: '100%', objectFit: 'cover', minHeight: '120px', background: '#000', borderRadius: '0' }}
+          />
+          <img
+            src="/assets/parallax-image.jpg"
+            alt="Parallax Visual"
+            style={{ flex: 1, width: '100%', height: '100%', objectFit: 'cover', minHeight: '120px', background: '#f4f4f4', borderRadius: '0' }}
+          />
         </div>
       </div>
       {/* Foreground Hero Content */}
       <div className={`parallax-hero-content${infoVisible ? ' out' : ''}`} ref={heroRef}>
         <div className="vision-pro-display">
-          <div style={{height: '80px', background: '#eee', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#aaa'}}>No Video</div>
+          <img
+            src="/assets/parallax-image.jpg"
+            alt="Parallax Thumbnail"
+            style={{ height: '80px', width: '100%', objectFit: 'cover', borderRadius: '8px', background: '#eee' }}
+          />
           <div className="vision-pro-location-info">
             <span>Los Angeles</span>
             <span>May 1 1:56 PM</span>
           </div>
           <div className="vision-pro-thumbnails">
             {[1,2,3,4].map((_, i) => (
-              <div key={i} style={{width: '40px', height: '30px', background: '#eee', margin: '0 4px', display: 'inline-block', color: '#aaa', fontSize: '0.8em', textAlign: 'center', lineHeight: '30px'}}>No Img</div>
+              <img
+                key={i}
+                src="/assets/parallax-image.jpg"
+                alt={`Thumbnail ${i+1}`}
+                style={{ width: '40px', height: '30px', background: '#eee', margin: '0 4px', display: 'inline-block', objectFit: 'cover', borderRadius: '4px' }}
+              />
             ))}
           </div>
         </div>
