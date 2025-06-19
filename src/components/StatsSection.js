@@ -91,6 +91,36 @@ const StatsSection = () => {
     }
   }, [animated]);
 
+  const handleKpiDownload = (kpiItem) => {
+    let csvString = "";
+
+    // Add KPI summary header and data
+    csvString += "Title,Unit,Current Value,Change (%),From Year\n";
+    csvString += `"${kpiItem.title}","${kpiItem.unit}",${kpiItem.value},${kpiItem.change},${kpiItem.from}\n`;
+
+    // Add a blank line for separation
+    csvString += "\n";
+
+    // Add historical data header and data
+    if (kpiItem.historical && kpiItem.historical.length > 0) {
+      csvString += "Historical Data\n";
+      csvString += "Year,Value\n";
+      kpiItem.historical.forEach(h => {
+        csvString += `${h.year},${h.value}\n`;
+      });
+    }
+
+    const blob = new Blob([csvString], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `kpi_data_${kpiItem.title.toLowerCase().replace(/\s+/g, '_')}.csv`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  };
+
   return (
     <section id="stats" className="stats-dashboard-section">
       <div className="stats-dashboard">
@@ -118,9 +148,11 @@ const StatsSection = () => {
               </div>
               {kpi.cta.type === 'link' ? (
                 <a href="#" className="breakdown-link">{kpi.cta.text} <span className="arrow-icon">{kpi.cta.icon}</span></a>
-              ) : (
-                <button className="download-btn">{kpi.cta.text} <span className="arrow-icon">{kpi.cta.icon}</span></button>
-              )}
+              ) : kpi.cta.type === 'download' ? (
+                <button className="download-btn" onClick={() => handleKpiDownload(kpi)}>
+                  {kpi.cta.text} <span className="arrow-icon">{kpi.cta.icon}</span>
+                </button>
+              ) : null}
             </div>
           );
         })}

@@ -97,7 +97,7 @@ const ScrollPopUpSection = () => {
         <video
           ref={mainVideoRef}
           id="mainVideo"
-          src="/assets/scroll-and-pop-up.mp4"
+          src="Assets/scroll and pop up.mp4"
           loop
           muted
           playsInline
@@ -119,9 +119,9 @@ const ScrollPopUpSection = () => {
         <div className="spu-floral-bg" />
         <h2 className="spu-play-reel-text">PLAY <span className="spu-play-icon">▶</span> REEL</h2>
         <div className="spu-reels-row" style={{ display: 'flex', gap: '24px', marginTop: '24px', overflowX: 'auto', padding: '8px 0' }}>
-          <video src="/assets/reel1.mp4" controls playsInline preload="metadata" autoPlay muted loop style={{ width: '320px', borderRadius: '12px', background: '#000' }} />
-          <video src="/assets/reel2.mp4" controls playsInline preload="metadata" autoPlay muted loop style={{ width: '320px', borderRadius: '12px', background: '#000' }} />
-          <video src="/assets/reel3.mp4" controls playsInline preload="metadata" autoPlay muted loop style={{ width: '320px', borderRadius: '12px', background: '#000' }} />
+          <video src="Reels/Last few days left to register for the event.Use the link in bio..mp4" playsInline preload="metadata" autoPlay muted loop style={{ width: '320px', borderRadius: '12px', background: '#000' }} />
+          <video src="Reels/See you at IIT Bhubaneswar, hackathon starts from 14th February! 💻🔥Gear up for Code Relay 3.0 - where innovation meets competition! 🚀Creative Credit- @shriyartss Edit Credit- @snehilhota.mp4" playsInline preload="metadata" autoPlay muted loop style={{ width: '320px', borderRadius: '12px', background: '#000' }} />
+          <video src="Reels/Still waiting ⏳ Don't miss out! Register for Code Relay 3.0 before the deadline on 6th Feb. 🔗Secure your spot- https---unstop.com-o-ULp2Aq9lb=49Vg1yP#coderelay_3 #iitbbs #iitbhubaneswar #registernow.mp4" playsInline preload="metadata" autoPlay muted loop style={{ width: '320px', borderRadius: '12px', background: '#000' }} />
         </div>
       </div>
       {/* Section 4: Red image grid with pop-up overlays */}
