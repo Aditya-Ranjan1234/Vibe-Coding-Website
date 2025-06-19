@@ -30,8 +30,8 @@ const ParallaxSection = () => {
       {/* Parallax Background */}
       <div className="parallax-bg" ref={bgRef}>
         <div className="parallax-bg-split">
-          <div style={{height: '120px', background: '#eee', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#aaa', width: '100%'}}>No Video</div>
-          <div style={{height: '120px', background: '#eee', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#aaa', width: '100%'}}>No Image</div>
+          <div className="parallax-placeholder" style={{flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#bbb', fontSize: '1.3rem', background: '#f4f4f4', minHeight: '120px'}}>No Video</div>
+          <div className="parallax-placeholder" style={{flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#bbb', fontSize: '1.3rem', background: '#f4f4f4', minHeight: '120px'}}>No Image</div>
         </div>
       </div>
       {/* Foreground Hero Content */}
