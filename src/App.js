@@ -3,9 +3,12 @@ import './App.css';
 import AnimatedLoader from './components/AnimatedLoader';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
+import StrikingFeaturesSection from './components/StrikingFeaturesSection';
 import FeaturesSection from './components/FeaturesSection';
-import ShowcaseSection from './components/ShowcaseSection';
 import TestimonialsSection from './components/TestimonialsSection';
+import CustomerSection from './components/CustomerSection';
+import CarouselSwitchSection from './components/CarouselSwitchSection';
+import ShowcaseSection from './components/ShowcaseSection';
 import StatsSection from './components/StatsSection';
 import CarouselSection from './components/CarouselSection';
 import SustainabilityDashboard from './components/SustainabilityDashboard';
@@ -26,9 +29,12 @@ function App() {
       </button>
       <Navbar />
       <HeroSection />
+      <StrikingFeaturesSection />
       <FeaturesSection />
-      <ShowcaseSection />
       <TestimonialsSection />
+      <CustomerSection />
+      <CarouselSwitchSection />
+      <ShowcaseSection />
       <StatsSection />
       <CarouselSection />
       <SustainabilityDashboard />

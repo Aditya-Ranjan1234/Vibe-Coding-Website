@@ -1,0 +1,50 @@
+.striking-section {
+  position: relative;
+  width: 100vw;
+  min-height: 420px;
+  background: #101015;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0 0 40px 0;
+}
+.striking-canvas {
+  width: 100vw;
+  height: 400px;
+  display: block;
+  background: #101015;
+  z-index: 1;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+.striking-content {
+  position: absolute;
+  top: 40px;
+  left: 0; right: 0;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  pointer-events: none;
+}
+.striking-content h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+  color: #0047FF;
+  text-shadow: 0 2px 16px #0008;
+}
+.striking-content p {
+  font-size: 1.1rem;
+  color: #E0E0E0;
+  max-width: 600px;
+  margin: 0 auto;
+  text-shadow: 0 1px 8px #0006;
+}
+@media (max-width: 700px) {
+  .striking-content h2 { font-size: 1.3rem; }
+  .striking-content p { font-size: 0.98rem; }
+  .striking-canvas { height: 220px; }
+  .striking-section { min-height: 240px; }
+} 
