@@ -1874,3 +1874,25 @@ body, .App {
 .footer .footer-cta:hover, .bottom-nav .footer-cta:hover, .main-footer .footer-cta:hover {
   background: #0056b3;
 }
+
+.section-label {
+  width: 100%;
+  text-align: left;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #007bff;
+  background: #f4f8fb;
+  padding: 18px 32px 6px 32px;
+  margin: 0 auto 0.5rem auto;
+  letter-spacing: 1px;
+  border-left: 6px solid #007bff;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 2px 8px #007bff11;
+}
+@media (max-width: 700px) {
+  .section-label {
+    font-size: 1.05rem;
+    padding: 12px 10px 4px 10px;
+    border-left-width: 4px;
+  }
+}
