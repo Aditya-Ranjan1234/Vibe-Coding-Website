@@ -171,17 +171,6 @@ const FeaturesSection = () => {
           </div>
         ))}
       </div>
-      <div className="features-bottom-navigation">
-        {BOTTOM_NAV.map((btn, i) => (
-          <button
-            key={btn.label}
-            className={`features-bottom-nav-btn${btn.cta ? ' cta' : ''}`}
-          >
-            {btn.label}
-            {btn.icon && <span className="features-bottom-nav-icon">{btn.label.includes('+') ? '+' : <svg width="16" height="16"><path d="M4 8h8M8 4v8" stroke="#fff" strokeWidth="2"/></svg>}</span>}
-          </button>
-        ))}
-      </div>
     </section>
   );
 };
