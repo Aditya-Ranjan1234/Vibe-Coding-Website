@@ -49,8 +49,6 @@ function App() {
       <GraphSection id="graph" />
       <div className='section-label'>Stats Section</div>
       <StatsSection id="stats" />
-      <div className='section-label'>Scroll PopUp Section</div>
-      <ScrollPopUpSection id="scrollpopup" />
       <div className='section-label'>Showcase Section</div>
       <ShowcaseSection id="showcase" />
       <div className='section-label'>Testimonials Section</div>
@@ -59,6 +57,8 @@ function App() {
       <CustomerSection id="customers" />
       <div className='section-label'>Carousel Switch Section</div>
       <CarouselSwitchSection id="carouselswitch" />
+      <div className='section-label'>Scroll PopUp Section</div>
+      <ScrollPopUpSection id="scrollpopup" />
       <div className='section-label'>Sustainability Dashboard</div>
       <SustainabilityDashboard id="sustainability" />
     </div>

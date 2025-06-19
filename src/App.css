@@ -105,11 +105,58 @@ body, .App {
   border-bottom: 1px solid #eee;
 }
 .navbar {
-  background: var(--navbar-bg);
-  color: var(--navbar-text);
+  width: 100vw;
+  overflow-x: auto;
+  background: #181818;
+  z-index: 1000;
 }
 .navbar-logo, .navbar-links button {
   color: var(--navbar-text);
+}
+.navbar-links {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  white-space: nowrap;
+  gap: 0.5rem;
+  font-size: 1rem;
+  max-width: 100vw;
+}
+.navbar-btn {
+  font-size: 1rem;
+  padding: 8px 16px;
+  margin: 0 2px;
+  border-radius: 8px;
+  background: #2d2d2d;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.navbar-btn:active, .navbar-btn:focus {
+  background: #4b2996;
+  color: #fff;
+}
+@media (max-width: 900px) {
+  .navbar-links {
+    font-size: 0.92rem;
+    gap: 0.3rem;
+  }
+  .navbar-btn {
+    font-size: 0.92rem;
+    padding: 7px 10px;
+  }
+}
+@media (max-width: 600px) {
+  .navbar-links {
+    font-size: 0.85rem;
+    gap: 0.15rem;
+  }
+  .navbar-btn {
+    font-size: 0.85rem;
+    padding: 6px 6px;
+  }
 }
 /* Toggle button for dark/light mode */
 .mode-toggle {
@@ -1870,11 +1917,11 @@ body, .App {
 .section-label {
   width: 100%;
   text-align: left;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: #007bff;
   background: #f4f8fb;
-  padding: 18px 32px 6px 32px;
+  padding: 10px 10px 4px 10px;
   margin: 0 auto 0.5rem auto;
   letter-spacing: 1px;
   border-left: 6px solid #007bff;
@@ -1883,12 +1930,40 @@ body, .App {
 }
 @media (max-width: 700px) {
   .section-label {
-    font-size: 1.05rem;
-    padding: 12px 10px 4px 10px;
-    border-left-width: 4px;
+    font-size: 0.98rem;
+    padding: 8px 6px 2px 6px;
+    border-left-width: 3px;
   }
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Video responsiveness */
+.spu-main-video, .spu-reels-row video {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 12px;
+  background: #000;
+}
+.spu-reels-row {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 8px 0;
+}
+@media (max-width: 900px) {
+  .spu-main-video, .spu-reels-row video {
+    max-width: 220px;
+  }
+}
+@media (max-width: 600px) {
+  .spu-main-video, .spu-reels-row video {
+    max-width: 140px;
+  }
+  .spu-reels-row {
+    gap: 8px;
+  }
 }
