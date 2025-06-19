@@ -2,6 +2,12 @@ import React, { useState } from 'react';
 import './App.css';
 import Loader from './components/Loader';
 import Navbar from './components/Navbar';
+import HeroSection from './components/HeroSection';
+import FeaturesSection from './components/FeaturesSection';
+import ShowcaseSection from './components/ShowcaseSection';
+import TestimonialsSection from './components/TestimonialsSection';
+import StatsSection from './components/StatsSection';
+import CarouselSection from './components/CarouselSection';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -10,12 +16,12 @@ function App() {
     <div className="App">
       {loading && <Loader onLoaded={() => setLoading(false)} />}
       <Navbar />
-      <section id="home" className="section">Home Section (Hero/Parallax)</section>
-      <section id="features" className="section">Features Section</section>
-      <section id="showcase" className="section">Showcase Section</section>
-      <section id="testimonials" className="section">Testimonials Section</section>
-      <section id="stats" className="section">Stats Section</section>
-      <section id="carousel" className="section">Carousel Section</section>
+      <HeroSection />
+      <FeaturesSection />
+      <ShowcaseSection />
+      <TestimonialsSection />
+      <StatsSection />
+      <CarouselSection />
     </div>
   );
 }
