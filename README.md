@@ -17,10 +17,21 @@ This project is a modern, visually rich, and highly interactive React web applic
 - Testimonials, customer grid, carousel, sustainability dashboard
 - Fully responsive, dark/light mode, and smooth navigation
 
+## Tech Stack
+
+This project is built using a modern frontend stack:
+
+- **Core:** React, JavaScript (ES6+), HTML5, CSS3
+- **Data Visualization:** D3.js
+- **3D Graphics:** Three.js (WebGL)
+- **Styling:** Advanced CSS techniques including Flexbox, Grid, and Animations.
+- **Development Environment:** Node.js, npm
+
 ## AI Tools Used
 - **Cursor AI** (for code generation, refactoring, and rapid prototyping)
-- **ChatGPT** (for code, documentation, and UI/UX suggestions)
+- **GPT** (for code, documentation, and UI/UX suggestions)
 - **Gemini** (for design, animation, and creative ideation)
+- **Jules** (for task execution and code modification)
 
 ## Project Structure
 - `src/components/` – All React components, organized by section
