@@ -37,12 +37,22 @@ const ScrollPopUpSection = () => {
       </div>
       {/* Section 2: Full-screen video with play button */}
       <div ref={sectionRefs[1]} className={`spu-section spu-video${stage === 1 ? ' active' : ''}`}>
-        <div className="spu-play-btn"><span className="spu-play-icon">▶</span></div>
+        <video
+          className="spu-main-video"
+          src="/assets/scroll-and-pop-up.mp4"
+          controls
+          style={{ width: '100%', maxHeight: '60vh', borderRadius: '16px', background: '#000' }}
+        />
       </div>
       {/* Section 3: Play Reel with floral bg and text */}
       <div ref={sectionRefs[2]} className={`spu-section spu-play-reel${stage === 2 ? ' active' : ''}`}>
         <div className="spu-floral-bg" />
         <h2 className="spu-play-reel-text">PLAY <span className="spu-play-icon">▶</span> REEL</h2>
+        <div className="spu-reels-row" style={{ display: 'flex', gap: '24px', marginTop: '24px', overflowX: 'auto', padding: '8px 0' }}>
+          <video src="/assets/reel1.mp4" controls style={{ width: '320px', borderRadius: '12px', background: '#000' }} />
+          <video src="/assets/reel2.mp4" controls style={{ width: '320px', borderRadius: '12px', background: '#000' }} />
+          <video src="/assets/reel3.mp4" controls style={{ width: '320px', borderRadius: '12px', background: '#000' }} />
+        </div>
       </div>
       {/* Section 4: Red image grid with pop-up overlays */}
       <div className="spu-image-grid">
