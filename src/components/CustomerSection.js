@@ -2,14 +2,14 @@ import React from 'react';
 import './CustomerSection.css';
 
 const CUSTOMERS = [
-  { name: 'Google', logo: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg' },
-  { name: 'Microsoft', logo: 'https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg' },
-  { name: 'Amazon', logo: 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg' },
-  { name: 'Facebook', logo: 'https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg' },
-  { name: 'Netflix', logo: 'https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg' },
-  { name: 'Uber', logo: 'https://upload.wikimedia.org/wikipedia/commons/c/cc/Uber_logo_2018.png' },
-  { name: 'Airbnb', logo: 'https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_Bélo.svg' },
-  { name: 'Spotify', logo: 'https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg' },
+  { name: 'Google', logo: process.env.PUBLIC_URL + '/assets/google-logo.png' },
+  { name: 'Microsoft', logo: process.env.PUBLIC_URL + '/assets/microsoft-logo.png' },
+  { name: 'Amazon', logo: process.env.PUBLIC_URL + '/assets/amazon-logo.png' },
+  { name: 'Facebook', logo: process.env.PUBLIC_URL + '/assets/facebook-logo.png' },
+  { name: 'Netflix', logo: process.env.PUBLIC_URL + '/assets/netflix-logo.png' },
+  { name: 'Uber', logo: process.env.PUBLIC_URL + '/assets/uber-logo.png' },
+  { name: 'Airbnb', logo: process.env.PUBLIC_URL + '/assets/airbnb-logo.png' },
+  { name: 'Spotify', logo: process.env.PUBLIC_URL + '/assets/spotify-logo.png' },
 ];
 
 const CustomerSection = () => (
