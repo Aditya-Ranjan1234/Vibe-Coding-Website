@@ -15,6 +15,8 @@ import SustainabilityDashboard from './components/SustainabilityDashboard';
 import ParallaxSection from './components/ParallaxSection';
 import RippleEffectSection from './components/RippleEffectSection';
 import ScrollPopUpSection from './components/ScrollPopUpSection';
+import CardsSection from './components/CardsSection';
+import GraphSection from './components/GraphSection';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -36,12 +38,14 @@ function App() {
       <StrikingFeaturesSection />
       <FeaturesSection />
       <RippleEffectSection />
+      <CardsSection />
+      <GraphSection />
+      <StatsSection />
       <ScrollPopUpSection />
       <ShowcaseSection />
       <TestimonialsSection />
       <CustomerSection />
       <CarouselSwitchSection />
-      <StatsSection />
       <CarouselSection />
       <SustainabilityDashboard />
     </div>
