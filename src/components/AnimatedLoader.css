@@ -1,0 +1,140 @@
+/* Loader overlay */
+.animated-loader {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: #000;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: opacity 0.5s;
+}
+.animated-loader.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.block-loader {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+.block {
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+.block.white {
+  background: #fff;
+  box-shadow: 2px 0 0 #333;
+}
+.block.dark {
+  background: #1A1A1A;
+  box-shadow: 2px 0 0 #333;
+}
+.block.none {
+  background: transparent;
+  box-shadow: none;
+}
+.block.l-vert {
+  background: #fff;
+  width: 20px !important;
+  height: 100px !important;
+  margin-right: 0;
+  box-shadow: none;
+}
+.block.l-horiz {
+  background: #fff;
+  width: 60px !important;
+  height: 20px !important;
+  margin-left: -20px;
+  margin-top: 80px;
+  box-shadow: none;
+}
+
+.l-shape {
+  position: relative;
+  width: 80px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.l-shape .l-vert {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 20px;
+  height: 100px;
+  background: #fff;
+  border-radius: 4px;
+}
+.l-shape .l-horiz {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 20px;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.wipe {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 120vw;
+  height: 120vh;
+  background: #fff;
+  transform: translate(-50%, -50%) rotate(30deg) scale(0.1);
+  animation: wipe-anim 0.5s cubic-bezier(0.42,0,0.58,1) forwards;
+  z-index: 100000;
+}
+@keyframes wipe-anim {
+  to {
+    transform: translate(-50%, -50%) rotate(30deg) scale(1.2);
+  }
+}
+
+.loader-num-text {
+  position: fixed;
+  left: 32px;
+  bottom: 32px;
+  color: #fff;
+  font-family: 'Roboto Mono', 'Consolas', 'Menlo', monospace;
+  font-size: 2rem;
+  opacity: 0.9;
+  letter-spacing: 2px;
+  pointer-events: none;
+  user-select: none;
+  transition: opacity 0.2s;
+}
+
+/* Abstract blurry tubes background */
+.abstract-bg {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eaf2fa;
+  z-index: 100001;
+  overflow: hidden;
+}
+.tube {
+  position: absolute;
+  border-radius: 40px;
+  filter: blur(18px);
+  opacity: 0.7;
+}
+.tube1 {
+  width: 180px; height: 40px; background: #fff; left: 20vw; top: 40vh; }
+.tube2 {
+  width: 120px; height: 32px; background: #b3d0f7; left: 40vw; top: 50vh; }
+.tube3 {
+  width: 200px; height: 48px; background: #eaf2fa; left: 60vw; top: 45vh; }
+.tube4 {
+  width: 100px; height: 28px; background: #fff; left: 30vw; top: 60vh; }
+.tube5 {
+  width: 140px; height: 36px; background: #b3d0f7; left: 55vw; top: 55vh; } 

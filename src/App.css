@@ -69,3 +69,65 @@
   font-size: 1.5rem;
   font-weight: 300;
 }
+
+/* Color variables for light and dark mode */
+:root {
+  --bg-main: #f7f7f7;
+  --bg-section: #fff;
+  --text-main: #181818;
+  --text-secondary: #333;
+  --accent: #673ab7;
+  --navbar-bg: #181818;
+  --navbar-text: #fff;
+}
+.dark-mode {
+  --bg-main: #181818;
+  --bg-section: #222;
+  --text-main: #f7f7f7;
+  --text-secondary: #e0e0e0;
+  --accent: #b39ddb;
+  --navbar-bg: #222;
+  --navbar-text: #fff;
+}
+body, .App {
+  background: var(--bg-main);
+  color: var(--text-main);
+  transition: background 0.3s, color 0.3s;
+}
+.section {
+  background: var(--bg-section);
+  color: var(--text-main);
+  border-bottom: 1px solid #eee;
+}
+.navbar {
+  background: var(--navbar-bg);
+  color: var(--navbar-text);
+}
+.navbar-logo, .navbar-links button {
+  color: var(--navbar-text);
+}
+/* Toggle button for dark/light mode */
+.mode-toggle {
+  position: fixed;
+  top: 18px;
+  right: 24px;
+  z-index: 1000;
+  background: var(--bg-section);
+  color: var(--text-main);
+  border: 1px solid var(--accent);
+  border-radius: 20px;
+  padding: 8px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.mode-toggle:hover {
+  background: var(--accent);
+  color: #fff;
+}
+/* Ensure all section backgrounds and text use variables */
+#home, #features, #showcase, #testimonials, #stats, #carousel {
+  background: var(--bg-section);
+  color: var(--text-main);
+}
