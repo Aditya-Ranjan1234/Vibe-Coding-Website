@@ -153,6 +153,7 @@ body, .App {
   z-index: 10000;
   box-shadow: 0 4px 24px 0 rgba(0,0,0,0.08), 0 1.5px 0 0 #eee;
   transition: background 0.3s, box-shadow 0.3s;
+  overflow-x: visible;
 }
 .navbar-logo.navbar-logo-big {
   font-size: 2.8rem;
@@ -161,6 +162,7 @@ body, .App {
   padding: 0 18px;
   color: var(--navbar-text);
   font-family: 'Montserrat', 'Lato', Arial, sans-serif;
+  white-space: nowrap;
 }
 .navbar-links.navbar-links-big {
   display: flex;
@@ -173,6 +175,7 @@ body, .App {
   scrollbar-color: var(--accent) #222;
   min-width: 0;
   justify-content: flex-end;
+  align-items: center;
 }
 .navbar-links.navbar-links-big::-webkit-scrollbar {
   height: 6px;
@@ -197,6 +200,7 @@ body, .App {
   text-align: center;
   white-space: nowrap;
   flex: 1 1 120px;
+  overflow: visible;
 }
 .navbar-btn:hover, .navbar-btn:focus {
   background: var(--accent);
@@ -245,38 +249,26 @@ body, .App {
   }
 }
 @media (max-width: 700px) {
-  .navbar-links.navbar-links-big {
-    position: fixed;
-    top: 64px;
-    left: 0;
-    width: 100vw;
-    background: var(--navbar-bg);
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0;
-    padding: 18px 0 18px 0;
-    box-shadow: 0 8px 32px #0002;
-    transform: translateY(-120%);
-    opacity: 0;
-    pointer-events: none;
-    transition: transform 0.3s, opacity 0.3s;
-    z-index: 9999;
+  .navbar.navbar-big {
+    height: 70px;
+    padding: 0 2px;
   }
-  .navbar-links.navbar-links-big.open {
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: auto;
+  .navbar-logo.navbar-logo-big {
+    font-size: 1.1rem;
+    padding: 0 2px;
+  }
+  .navbar-links.navbar-links-big {
+    gap: 4px;
+    max-width: 100vw;
+    padding: 0 1px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
   .navbar-btn {
-    width: 100vw;
-    text-align: left;
-    padding: 18px 24px;
-    font-size: 1.1rem;
-    border-radius: 0;
-    border-bottom: 1px solid #2222;
-  }
-  .navbar-toggle.navbar-toggle-big {
-    display: flex;
+    font-size: 0.92rem;
+    padding: 7px 4px;
+    min-width: 60px;
+    flex: 1 1 60px;
   }
 }
 body, .App {
@@ -1895,4 +1887,8 @@ body, .App {
     padding: 12px 10px 4px 10px;
     border-left-width: 4px;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
