@@ -33,21 +33,21 @@ function App() {
         {darkMode ? 'Light Mode' : 'Dark Mode'}
       </button>
       <Navbar />
-      <HeroSection />
-      <ParallaxSection />
-      <StrikingFeaturesSection />
-      <FeaturesSection />
-      <RippleEffectSection />
-      <CardsSection />
-      <GraphSection />
-      <StatsSection />
-      <ScrollPopUpSection />
-      <ShowcaseSection />
-      <TestimonialsSection />
-      <CustomerSection />
-      <CarouselSwitchSection />
-      <CarouselSection />
-      <SustainabilityDashboard />
+      <HeroSection id="home" />
+      <ParallaxSection id="parallax" />
+      <StrikingFeaturesSection id="striking" />
+      <FeaturesSection id="features" />
+      <RippleEffectSection id="ripple" />
+      <CardsSection id="cards" />
+      <GraphSection id="graph" />
+      <StatsSection id="stats" />
+      <ScrollPopUpSection id="scrollpopup" />
+      <ShowcaseSection id="showcase" />
+      <TestimonialsSection id="testimonials" />
+      <CustomerSection id="customers" />
+      <CarouselSwitchSection id="carouselswitch" />
+      <CarouselSection id="carousel" />
+      <SustainabilityDashboard id="sustainability" />
     </div>
   );
 }
