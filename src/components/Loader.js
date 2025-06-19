@@ -14,7 +14,7 @@ const Loader = ({ onLoaded }) => {
 
   return (
     <div className={`loader-overlay${hidden ? ' hidden' : ''}`}>
-      <video src="/Assets/loader.mp4" autoPlay loop muted className="loader-video" />
+      <div style={{height: '80px', background: '#eee', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#aaa'}}>Loading...</div>
     </div>
   );
 };

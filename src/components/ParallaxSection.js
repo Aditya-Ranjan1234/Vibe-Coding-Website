@@ -1,16 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import '../App.css';
 
-const backgroundIndoor = '/Assets/customer-section.mp4'; // Placeholder for indoor scene
-const backgroundOutdoor = '/Assets/graph.png'; // Placeholder for outdoor scene (use an image for now)
-const swingVideo = '/Assets/parallax animation.mp4'; // Placeholder for girl on swing
-const thumbnails = [
-  '/Assets/cards.png',
-  '/Assets/stats.png',
-  '/Assets/graph.png',
-  '/Assets/showcase work.mp4',
-];
-
 const ParallaxSection = () => {
   const bgRef = useRef();
   const heroRef = useRef();
@@ -40,21 +30,21 @@ const ParallaxSection = () => {
       {/* Parallax Background */}
       <div className="parallax-bg" ref={bgRef}>
         <div className="parallax-bg-split">
-          <video className="parallax-bg-indoor" src={backgroundIndoor} autoPlay loop muted playsInline />
-          <img className="parallax-bg-outdoor" src={backgroundOutdoor} alt="Outdoor scene" />
+          <div style={{height: '120px', background: '#eee', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#aaa', width: '100%'}}>No Video</div>
+          <div style={{height: '120px', background: '#eee', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#aaa', width: '100%'}}>No Image</div>
         </div>
       </div>
       {/* Foreground Hero Content */}
       <div className={`parallax-hero-content${infoVisible ? ' out' : ''}`} ref={heroRef}>
         <div className="vision-pro-display">
-          <video className="vision-pro-video" src={swingVideo} autoPlay loop muted playsInline />
+          <div style={{height: '80px', background: '#eee', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#aaa'}}>No Video</div>
           <div className="vision-pro-location-info">
             <span>Los Angeles</span>
             <span>May 1 1:56 PM</span>
           </div>
           <div className="vision-pro-thumbnails">
-            {thumbnails.map((src, i) => (
-              <img src={src} alt="thumb" key={i} className="vision-pro-thumb" />
+            {[1,2,3,4].map((_, i) => (
+              <div key={i} style={{width: '40px', height: '30px', background: '#eee', margin: '0 4px', display: 'inline-block', color: '#aaa', fontSize: '0.8em', textAlign: 'center', lineHeight: '30px'}}>No Img</div>
             ))}
           </div>
         </div>

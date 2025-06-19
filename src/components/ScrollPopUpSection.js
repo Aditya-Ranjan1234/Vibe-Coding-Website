@@ -1,12 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import '../App.css';
 
-const images = [
-  '/Assets/cards.png', // lemon glass placeholder
-  '/Assets/customer-section.mp4', // patterned clothing placeholder
-  '/Assets/graph.png', // cat placeholder
-];
-
 const ScrollPopUpSection = () => {
   const [stage, setStage] = useState(0);
   const sectionRefs = [useRef(), useRef(), useRef(), useRef()];
@@ -38,13 +32,11 @@ const ScrollPopUpSection = () => {
         <div className="spu-fluid-bg" />
         <div className="spu-content">
           <button className="spu-about-btn">ABOUT US</button>
-          <img src="/Assets/stats.png" alt="Train Track" className="spu-blur-img" />
           <div className="spu-blue-pipe" />
         </div>
       </div>
       {/* Section 2: Full-screen video with play button */}
       <div ref={sectionRefs[1]} className={`spu-section spu-video${stage === 1 ? ' active' : ''}`}>
-        <video className="spu-video-bg" src="/Assets/scroll and pop up.mp4" autoPlay loop muted playsInline />
         <div className="spu-play-btn"><span className="spu-play-icon">▶</span></div>
       </div>
       {/* Section 3: Play Reel with floral bg and text */}
@@ -53,29 +45,12 @@ const ScrollPopUpSection = () => {
         <h2 className="spu-play-reel-text">PLAY <span className="spu-play-icon">▶</span> REEL</h2>
       </div>
       {/* Section 4: Red image grid with pop-up overlays */}
-      <div ref={sectionRefs[3]} className={`spu-section spu-image-grid${stage === 3 ? ' active' : ''}`}>
-        <div className="spu-image-grid">
-          {images.map((src, i) => (
-            <div className="spu-image-card" key={i}>
-              <img src={src} alt={`img${i}`} className="spu-img" />
-              <div className="spu-interactive-icons">
-                <span className="spu-icon">⬆</span>
-                <span className="spu-icon">📷</span>
-                <span className="spu-icon">⚙</span>
-                <span className="spu-icon">⇪</span>
-                <span className="spu-plus">+</span>
-              </div>
-              <div className="spu-hover-overlay">
-                <span className="spu-hover-icon">⬇</span>
-                <span className="spu-hover-icon">⇪</span>
-                <span className="spu-hover-icon">📷</span>
-                <span className="spu-hover-icon">🔗</span>
-              </div>
-            </div>
-          ))}
+      <div className="spu-image-grid">
+        <div className="spu-image-card">
+          <div className="spu-img" style={{height: '80px', background: '#eee', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#aaa'}}>No Image</div>
         </div>
-        <div className="spu-featured-work-heading">Featured Work</div>
       </div>
+      <div className="spu-featured-work-heading">Featured Work</div>
     </section>
   );
 };
